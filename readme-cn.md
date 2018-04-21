@@ -15,3 +15,10 @@ class App extends React.Component{
         )
     )
 }
+
+如果用atom编辑器 希望jsx可以使用emmet
+安装 emment language-babel emmet-jsx-props
+在 emmet-jsx-props 里面有一些配置项
+在 keymap.cson 添加以下配置
+'atom-text-editor[data-grammar~="jsx"]:not([mini])':
+  'tab': 'emmet:expand-abbreviation-with-tab'
