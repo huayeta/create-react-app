@@ -5,6 +5,10 @@ import './App.css';
 import {Button, NavBar, Icon} from 'antd-mobile';
 import {hot} from 'react-hot-loader';
 
+import('./a.js').then(a=>{
+    console.log(a);
+})
+
 class Title extends React.Component {
     static state = {
         a: 1
@@ -67,7 +71,7 @@ class App extends Component {
             <p>
                 <Con text="Con.props.text">Con.props.children</Con>
             </p>
-            <p></p>
+
         </div>);
     }
 }

@@ -4,6 +4,7 @@
 添加 react的jsx 支持 @babel/preset-react @babel/preset-es2015
 添加 装饰器 支持 @babel/plugin-proposal-decorators
 添加 静态类属性 支持 @babel/plugin-proposal-class-properties
+添加 import代码分割 支持 @babel/plugin-syntax-dynamic-import
 添加 热替换 支持 react-hot-loader/babel
 import {hot} form 'react-hot-loader';
 
