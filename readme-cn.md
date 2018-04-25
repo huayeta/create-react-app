@@ -5,6 +5,7 @@
 添加 装饰器 支持 @babel/plugin-proposal-decorators
 添加 静态类属性 支持 @babel/plugin-proposal-class-properties
 添加 import代码分割 支持 @babel/plugin-syntax-dynamic-import
+支持 react组件的代码分割 使用 react-loadable 组件
 添加 热替换 支持 react-hot-loader/babel
 import {hot} form 'react-hot-loader';
 

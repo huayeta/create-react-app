@@ -4,11 +4,28 @@ import logo from './logo.svg';
 import './App.css';
 import {Button, NavBar, Icon} from 'antd-mobile';
 import {hot} from 'react-hot-loader';
+import {wire,register} from './di.jsx';
+import styled from 'styled-components';
 
 import('./a.js').then(a=>{
-    console.log(a);
+    // console.log(a);
 })
 
+register('my-title','react in patterns');
+
+const Span=styled.span`
+    font-size:20px;
+    color:#fff;
+    background:black;
+    display: grid;
+    grid-template-columns:1;
+    grid-template-rows:1;
+    justify-items:center;
+    align-items:center;
+    height:80px;
+`;
+
+@wire(['my-title'],(title)=>({title}))
 class Title extends React.Component {
     static state = {
         a: 1
@@ -20,7 +37,7 @@ class Title extends React.Component {
         text: Proptypes.string
     }
     render() {
-        return (<span>{this.props.text}</span>)
+        return (<Span>{this.props.text}--{this.props.title.join()}</Span>)
     }
 }
 
